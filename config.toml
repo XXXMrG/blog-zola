@@ -1,5 +1,5 @@
 # Be sure to change these!
-base_url = "xkeith-tech.vercel.app"
+base_url = "https://xkeith-tech.vercel.app/"
 title = "XXXMRG's blog"
 
 # Sass compilation is required
