@@ -58,12 +58,11 @@
                 {%- set show_pages = section.pages -%}
             {% endif -%}
 
-            {%- for page in show_pages %}
-                <div class="post on-list">
-                    {{ post_macros::header(page=page) }}
-                    {{ post_macros::content(page=page, summary=true) }}
-                </div>
-            {% endfor -%}
+            <div class="post on-list">
+                <h1 class="post-title">Blogs</h1>
+                {{ post_macros::list_posts(pages=show_pages) }}
+            </div>
+
             <div class="pagination">
                 <div class="pagination__buttons">
                 {%- if paginator.previous %}

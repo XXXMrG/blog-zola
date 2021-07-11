@@ -230,12 +230,7 @@ gl.drawArrays(gl.TRIANGLES, 0, points.length);
 gl.uniformMatrix4fv(programInfo.uniformLocations.projectionMatrix, false, projectionMatrix);
 ```
 
-
 ## Reference
+
 部分实例代码来自月影团长
-[GitHub - akira-cn/ICG-WebGL: 交互式计算机图形学——基于WebGL的自顶向下方法（第七版）的例子与练习题](https://github.com/akira-cn/ICG-WebGL)
-
-
-
-
-
+* [GitHub - akira-cn/ICG-WebGL: 交互式计算机图形学——基于WebGL的自顶向下方法（第七版）的例子与练习题](https://github.com/akira-cn/ICG-WebGL)

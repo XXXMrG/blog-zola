@@ -52,7 +52,7 @@ menu_items = [
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
     {name = "tags", url = "/tags"},
-    {name = "archive", url = "/archive"},
+    {name = "translations", url = "/translations"},
     {name = "about me", url = "/about"},
 
     # set newtab to true to make the link open in new tab
