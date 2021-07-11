@@ -6,4 +6,4 @@ date = 2021-07-11
 tags = ["Rust", "Translation"]
 +++
 
-> https://cprimozic.net/blog/speeding-up-webcola-with-webassembly/
+> [Speeding Up the Webcola Graph Viz Library with Rust + WebAssembly](https://cprimozic.net/blog/speeding-up-webcola-with-webassembly/)
