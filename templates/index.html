@@ -59,7 +59,7 @@
             {% endif -%}
 
             <div class="post on-list">
-                <h1 class="post-title">Blogs</h1>
+                <h1 class="post-title">blogs</h1>
                 {{ post_macros::list_posts(pages=show_pages) }}
             </div>
 
@@ -91,7 +91,10 @@
     <footer class="footer">
         <div class="footer__inner">
             {%- if config.extra.copyright_html %}
-                <div class="copyright copyright--user">{{ config.extra.copyright_html | safe }}</div>
+                <div class="copyright copyright--user">
+                    <span>© {{ date_macros::now_year() }}</span>
+                    {{ config.extra.copyright_html | safe }}
+                </div>
             {% else %}
                 <div class="copyright">
                     {%- if config.extra.author %}

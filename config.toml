@@ -37,11 +37,11 @@ logo_text = "XXXMRG's blog"
 # Author name: when specified, modifies the default
 # copyright text. Apart from author, it will
 # contain current year and a link to the theme.
-#author = "XXXMRG"
+# author = "XXXMRG"
 
 # Copyright text in HTML format. If specified,
 # entirely replaces default copyright and author.
-#copyright_html = "My custom&nbsp;<b>copyright</b>"
+copyright_html = '<b>XXXMRG</b>&nbsp; <span>Powered by <a target="_blank" href="https://www.getzola.org/">Zola</a></span>'
 
 # menu is enabled by adding menu_items (optional)
 menu_items = [
