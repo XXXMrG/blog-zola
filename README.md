@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/pawroman/zola-theme-terminimal.svg?branch=master)](https://travis-ci.org/pawroman/zola-theme-terminimal)
 ![No JavaScript](https://img.shields.io/badge/JavaScript-none-brightgreen.svg)
 
-![Screenshot](../master/screenshot/screenshot.png?raw=true)
+![Screenshot](../main/screenshot/screenshot.png?raw=true)
 
 Live demo here: https://pawroman.github.io/zola-theme-terminimal/
 
