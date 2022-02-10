@@ -14,4 +14,4 @@ FE now in @baidu EFE
 
 ### Friend links
 
-* [https://0xab.de/](https://0xab.de/)
+* [https://arjenzhou.com/](https://arjenzhou.com/)
