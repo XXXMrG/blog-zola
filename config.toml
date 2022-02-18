@@ -10,11 +10,12 @@ taxonomies = [
     {name = "tags"}
 ]
 
+default_language = "zh-CN"
+
+[markdown]
 # Code highlighting
 highlight_code = true
-highlight_theme = "1337"
-
-default_language = "zh-CN"
+highlight_theme = "ayu-mirage"
 
 [extra]
 

@@ -3,7 +3,17 @@
   --accent-alpha-70: rgba(120,226,160,.7);
   --accent-alpha-20: rgba(120,226,160,.2);
 
+  --notice: rgb(255, 230, 230);
+
   --background: #1F222A;
   --color: white;
   --border-color: rgba(255, 255, 255, .1);
+}
+
+mark {
+    background-color: var(--accent);
+}
+
+mark.notice {
+    background-color: var(--notice);
 }

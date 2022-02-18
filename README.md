@@ -1,5 +1,9 @@
 # Terminimal
 
+## NOTICE
+
+forked from [zola-theme-terminimal](https://github.com/pawroman/zola-theme-terminimal)
+
 [![Build Status](https://travis-ci.org/pawroman/zola-theme-terminimal.svg?branch=master)](https://travis-ci.org/pawroman/zola-theme-terminimal)
 ![No JavaScript](https://img.shields.io/badge/JavaScript-none-brightgreen.svg)
 
