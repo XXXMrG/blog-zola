@@ -6,17 +6,19 @@ date = 2019-09-12
 tags = ["FE", "React"]
 +++
 
-
 ## What is Fiber ?
+
 “fiber” reconciler 是一个新尝试，致力于解决 stack reconciler 中固有的问题，同时解决一些历史遗留问题。Fiber 从 React 16 开始变成了默认的 reconciler。
+
 <!--more-->
+
 它的主要目标是：
 
-* 能够把可中断的任务切片处理。
-* 能够调整优先级，重置并复用任务。
-* 能够在父元素与子元素之间交错处理，以支持 React 中的布局。
-* 能够在render()中返回多个元素。
-* 更好地支持错误边界。
+- 能够把可中断的任务切片处理。
+- 能够调整优先级，重置并复用任务。
+- 能够在父元素与子元素之间交错处理，以支持 React 中的布局。
+- 能够在 render()中返回多个元素。
+- 更好地支持错误边界。
 
 这里列举 Fiber 的数据结构，仅截取部分重要属性。
 
@@ -63,14 +65,14 @@ export type Fiber = {|
   return: Fiber | null,
 
   // Singly Linked List Tree Structure.
-	// return child sibling 子节点 兄弟节点 这些是将 Fiber tree 连接在一起的重要指针
+  // return child sibling 子节点 兄弟节点 这些是将 Fiber tree 连接在一起的重要指针
   child: Fiber | null,
   sibling: Fiber | null,
   index: number,
 
   // The ref last used to attach this node.
   // I'll avoid adding an owner field for prod and model that as functions.
-  ref: null | (((handle: mixed) => void) & {_stringRef: ?string}) | RefObject,
+  ref: null | (((handle: mixed) => void) & { _stringRef: ?string }) | RefObject,
 
   // Input is the data coming into process this fiber. Arguments. Props.
   pendingProps: any, // This type will be more specific once we overload the tag.
@@ -94,8 +96,8 @@ export type Fiber = {|
   mode: TypeOfMode,
 
   // Effect
-	// 需要修改的 fiber 上打上这个 tag 来 trace 更新
-	// Effect list 是个链表来着 因此有了下面的这些操作
+  // 需要修改的 fiber 上打上这个 tag 来 trace 更新
+  // Effect list 是个链表来着 因此有了下面的这些操作
   effectTag: SideEffectTag,
 
   // Singly linked list fast path to the next fiber with side-effects.
@@ -109,7 +111,7 @@ export type Fiber = {|
 
   // Represents a time in the future by which this work should be completed.
   // Does not include work found in its subtree.
-	// 用于计算优先级的重要变量
+  // 用于计算优先级的重要变量
   expirationTime: ExpirationTime,
 
   // This is used to quickly determine if a subtree has no pending changes.
@@ -126,6 +128,7 @@ export type Fiber = {|
 ![PCD4s6VXUNTMIr5.jpg](https://i.loli.net/2019/09/12/PCD4s6VXUNTMIr5.jpg)
 
 ![oepNQ8mZGEyxqnr.jpg](https://i.loli.net/2019/09/12/oepNQ8mZGEyxqnr.jpg)
+
 ## setState 内幕
 
 实际上引起 setState 的同步和异步更新的决定性原因是 React 的合成事件机制，它会将合成事件包裹中的 update 放到队列中批量更新，而没有经过合成事件处理的 setState 往往是同步执行的。
@@ -134,12 +137,12 @@ export type Fiber = {|
 
 ## Reference
 
-* [Lin Clark - A Cartoon Intro to Fiber - React Conf 2017 - YouTube](https://youtu.be/ZCuYPiUIONs)
-* [GitHub - acdlite/react-fiber-architecture: A description of React’s new core algorithm, React Fiber](https://github.com/acdlite/react-fiber-architecture)
-* [Cooperative Scheduling of Background Tasks](https://www.w3.org/TR/requestidlecallback/)
-* [window.requestAnimationFrame - Web API 接口参考 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame)
-* [requestIdleCallback - Web API 接口参考 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback)
-* [React 源码全方位剖析 | 每天一探](http://www.sosout.com/2018/08/12/react-source-analysis.html)
-* [React Fiber - 掘金](https://juejin.im/post/5ab7b3a2f265da2378403e57)
-* [你真的理解setState吗？ - 掘金](https://juejin.im/post/5b45c57c51882519790c7441)
-* [【React深入】React事件机制-前端外刊评论](https://qianduan.group/posts/5cb1b0e49fd64d5a7458a981)
+- [Lin Clark - A Cartoon Intro to Fiber - React Conf 2017 - YouTube](https://youtu.be/ZCuYPiUIONs)
+- [GitHub - acdlite/react-fiber-architecture: A description of React’s new core algorithm, React Fiber](https://github.com/acdlite/react-fiber-architecture)
+- [Cooperative Scheduling of Background Tasks](https://www.w3.org/TR/requestidlecallback/)
+- [window.requestAnimationFrame - Web API 接口参考 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame)
+- [requestIdleCallback - Web API 接口参考 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback)
+- [React 源码全方位剖析 | 每天一探](http://www.sosout.com/2018/08/12/react-source-analysis.html)
+- [React Fiber - 掘金](https://juejin.im/post/5ab7b3a2f265da2378403e57)
+- [你真的理解 setState 吗？ - 掘金](https://juejin.im/post/5b45c57c51882519790c7441)
+- [【React 深入】React 事件机制-前端外刊评论](https://qianduan.group/posts/5cb1b0e49fd64d5a7458a981)
