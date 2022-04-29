@@ -35,20 +35,12 @@ favicon = "/icon/favicon.png"
 
 copyright = "keith"
 
-[[extra.menu]]
-name = "Home"
-url = "/"
-weight = 1
 
 [[extra.menu]]
 name = "All posts"
 url = "/posts"
 weight = 2
 
-[[extra.menu]]
-name = "About"
-url = "/about"
-weight = 3
 
 [[extra.menu]]
 name = "Tags"

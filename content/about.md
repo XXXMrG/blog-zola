@@ -1,6 +1,5 @@
 +++
-title = "about me"
-path = "about"
+title = "About me"
 date = "2022-04-28"
 +++
 
@@ -8,10 +7,10 @@ FE now in @baidu EFE
 
 ---
 
-### Projects
+## Projects
 
 - [Recursive program execution process demonstration](https://recursive-animation.vercel.app/)
 
-### Friend links
+## Friend links
 
 - [https://arjenzhou.com/](https://arjenzhou.com/)
