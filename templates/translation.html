@@ -1,0 +1,7 @@
+{% extends "archie-zola/templates/index.html" %}
+
+{% block main_content %}
+    {% set section = get_section(path="translation/_index.md") %}
+
+    {{ post_macros::list_title(pages=section.pages) }}
+{% endblock main_content %}

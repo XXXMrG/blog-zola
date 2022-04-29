@@ -41,6 +41,11 @@ name = "All posts"
 url = "/posts"
 weight = 2
 
+[[extra.menu]]
+name = "Translation"
+url = "/translation"
+weight = 3
+
 
 [[extra.menu]]
 name = "Tags"
