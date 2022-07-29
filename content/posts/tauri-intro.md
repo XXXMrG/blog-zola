@@ -4,6 +4,9 @@ date = 2022-02-18
 
 [taxonomies]
 tags = ["FE", "Rust"]
+
+[extra]
+author = { name = "XXXMRG", social= "https://github.com/XXXMrG" }
 +++
 
 本文旨在介绍 tauri 的相关背景知识、性能及可用性表现、以及一点架构设计思想。

@@ -10,7 +10,7 @@ taxonomies = [
     {name = "tags"}
 ]
 
-default_language = "zh-CN"
+default_language = "en"
 
 theme = "archie-zola"
 
@@ -36,22 +36,24 @@ favicon = "/icon/favicon.png"
 copyright = "keith"
 
 
-[[extra.menu]]
-name = "All posts"
-url = "/posts"
-weight = 2
+[extra.translations]
+languages = [{name = "en", url = "/"}]
 
-[[extra.menu]]
-name = "Translation"
-url = "/translation"
-weight = 3
+[[extra.translations.en]]
+show_more = "Read more ⟶"
+previous_page = "← Previous"
+next_page = "Next →"
+posted_on = "on "
+posted_by = "Published by"
+read_time = "minute read"
+all_tags = "All tags"
+menus = [
+    { name = "All posts", url = "/posts", weight = 2 },
+    { name = "Translation", url = "/translation", weight = 2 },
+    { name = "Tags", url = "/tags", weight = 4 },
+]
 
-
-[[extra.menu]]
-name = "Tags"
-url = "/tags"
-weight = 4
-
+# config social icon info in the footer
 [[extra.social]]
 icon = "github"
 name = "GitHub"

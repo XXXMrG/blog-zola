@@ -7,5 +7,5 @@
         {% endif %}
     </div>
 
-    {{ post_macros::content(page=get_page(path="about.md")) }}
+    {{ post_macros::content(page=get_page(path="about.md"), extra=config.extra) }}
 {% endblock main_content %}
