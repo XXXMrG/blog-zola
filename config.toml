@@ -5,12 +5,12 @@ title = "XXXMRG's blog"
 # Sass compilation is required
 compile_sass = true
 
+default_language = "zh-CN"
+
 # Optional: enable tags
 taxonomies = [
     {name = "tags"}
 ]
-
-default_language = "en"
 
 theme = "archie-zola"
 
@@ -36,10 +36,8 @@ favicon = "/icon/favicon.png"
 copyright = "keith"
 
 
-[extra.translations]
-languages = [{name = "en", url = "/"}]
 
-[[extra.translations.en]]
+[[extra.translations.zh-CN]]
 show_more = "Read more ⟶"
 previous_page = "← Previous"
 next_page = "Next →"
