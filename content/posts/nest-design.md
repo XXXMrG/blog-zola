@@ -479,10 +479,35 @@ Reflect.defineMetadata("design:paramtypes", [CatService], CatController);
 因为 JS 与 TS 的装饰器支持的能力有些差别，因此在 NestJS 中，二者在开发模式上也有一些区别：
 
 使用 JS 时，依赖注入需要这样声明：
-![[Pasted image 20231127152221.png]]
+
+```js
+@Controller()
+@Dependencies(AppService)
+export class AppController {
+  constructor(appService) {
+    this.appService = appService;
+  }
+
+  @Get()
+  getHello() {
+    return this.appService.getHello();
+  }
+}
+```
 
 而 TS 只需要声明在构造函数的参数中，更加清晰直观：
-![[Pasted image 20231127152712.png]]
+
+```ts
+@Controller()
+export class AppController {
+  constructor(private readonly appService: AppService) {}
+
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
+  }
+}
+```
 
 因为 TS 的参数装饰器，可以直接在运行时获取参数的信息，此时我们只需将上面 `defineMetaData` 的逻辑直接放在一个参数装饰器中即可。
 
