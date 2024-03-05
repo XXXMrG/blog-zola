@@ -8,9 +8,7 @@ compile_sass = true
 default_language = "zh-CN"
 
 # Optional: enable tags
-taxonomies = [
-    {name = "tags"}
-]
+taxonomies = [{ name = "tags" }]
 
 theme = "archie-zola"
 
@@ -35,6 +33,7 @@ favicon = "/icon/favicon.png"
 
 copyright = "keith"
 
+katex_enable = true
 
 
 [[extra.translations.zh-CN]]
