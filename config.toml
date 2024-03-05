@@ -29,6 +29,8 @@ mode = "toggle"
 # interal CDN resource
 useCDN = false
 
+ga = "G-76978YD176"
+
 favicon = "/icon/favicon.png"
 
 copyright = "keith"
